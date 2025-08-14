@@ -1,6 +1,6 @@
 {
   "name": "profanitybuster",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0",
   "description": "High-performance, TypeScript profanity detection and filtering library with modular language packs.",
   "keywords": [
     "profanity",
