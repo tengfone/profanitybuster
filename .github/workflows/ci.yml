@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         node: [20, 22]
     steps:
@@ -17,8 +18,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-          cache: 'npm'
-      - run: npm ci
+          cache: "npm"
+      # Workaround npm optional deps bug with Rollup on Node 22: use `npm install` instead of `npm ci`
+      - if: ${{ matrix.node == 22 }}
+        run: npm install --include=optional --no-audit --no-fund
+      - if: ${{ matrix.node != 22 }}
+        run: npm ci
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run test
