@@ -14,15 +14,15 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/tengfone/profanitybuster"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/tengfone/profanitybuster/issues"
   },
   "author": "tengfone",
   "sideEffects": false,
   "engines": {
-    "node": ">=18"
+    "node": ">=20.19.0"
   },
   "type": "commonjs",
   "main": "./dist/index.js",
