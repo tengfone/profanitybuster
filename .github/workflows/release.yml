@@ -16,7 +16,7 @@ jobs:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
           cache: 'npm'
-      - run: npm ci
+      - run: npm install --include=optional --no-audit --no-fund
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test
