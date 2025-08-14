@@ -14,7 +14,7 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tengfone/profanitybuster"
+    "url": "git+https://github.com/tengfone/profanitybuster.git"
   },
   "bugs": {
     "url": "https://github.com/tengfone/profanitybuster/issues"
